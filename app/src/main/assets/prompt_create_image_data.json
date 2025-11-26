@@ -1,0 +1,1198 @@
+[
+  {
+    "id": 1,
+    "lang_code": "en",
+    "data": [
+      {
+        "id": "1",
+        "prompt": "A tranquil forest with sunlight filtering through tall pine trees, mist on the ground, ultra-realistic.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_1.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "2",
+        "prompt": "Neon-lit alleyway in a futuristic cyberpunk city, rain on the ground, glowing holograms, ultra-realistic.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_2.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "3",
+        "prompt": "Single cherry blossom tree on a green hill, petals falling in the wind, sunset background, photorealistic.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_3.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "4",
+        "prompt": "A lone astronaut standing on an alien desert with two suns, futuristic suit glowing, cinematic view.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_4.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "5",
+        "prompt": "A quiet European old town square with cobblestone streets, cafes, and bicycles, golden hour lighting.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_5.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "6",
+        "prompt": "An ultra-realistic tranquil forest scene with golden sunlight streaming through towering pine trees, gentle morning mist drifting across the forest floor.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_6.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "7",
+        "prompt": "A street food vendor cooking in a busy Asian market, steam rising from hot pans, vibrant colors.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_7.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "8",
+        "prompt": "A futuristic city powered by AI, flying cars and holographic billboards, glowing blue lights, ultra-realistic.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_8.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      }
+
+    ,
+      {
+        "id": "9",
+        "prompt": "A minimalist modern workspace with a sleek laptop, coffee, and neutral tones, clean aesthetic.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_9.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      }
+    ,
+      {
+        "id": "10",
+        "prompt": "Golden sunrise over snow-covered mountains, warm morning light reflecting on icy peaks, ultra-realistic.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_10.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "11",
+        "prompt": "Palm trees swaying on a white sandy beach, turquoise water and soft waves under a pink-orange sunset sky.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_11.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "12",
+        "prompt": "A narrow trail winding through a dense green forest with sunlight filtering through the leaves, misty morning atmosphere.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_12.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "13",
+        "prompt": "Golden sand dunes under a vibrant orange sky, a lone traveler walking in the distance, cinematic desert view.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_13.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "14",
+        "prompt": "A majestic waterfall cascading into a crystal-clear pool surrounded by lush tropical jungle, photorealistic detail.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_14.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "15",
+        "prompt": "A snowy pine forest under a glowing aurora borealis night sky, reflection on icy lake, ultra-detailed.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_15.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "16",
+        "prompt": "Golden wheat fields waving in the wind with a small farmhouse and distant mountains, warm evening sunlight.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_16.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "17",
+        "prompt": "Colorful coral reef full of tropical fish, sunlight streaming through clear blue water, ultra-realistic photography style.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_17.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "18",
+        "prompt": "A vast field of wildflowers in full bloom, butterflies flying, bright summer sky, dreamy atmosphere.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_18.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "lang_code": "de",
+    "data": [
+      {
+        "id": "1",
+        "prompt": "Ein ruhiger Wald mit Sonnenlicht, das durch hohe Kiefern sickert, Nebel am Boden, ultrarealistisch, 1:1 Seitenverhältnis.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_1.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "2",
+        "prompt": "Neonbeleuchtete Gasse in einer futuristischen Cyberpunk-Stadt, Regen auf dem Boden, leuchtende Hologramme, ultrarealistisch.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_2.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "3",
+        "prompt": "Einzelner Kirschblütenbaum auf einem grünen Hügel, Blütenblätter fallen im Wind, Sonnenuntergangshintergrund, fotorealistisch.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_3.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "4",
+        "prompt": "Ein einsamer Astronaut steht in einer außerirdischen Wüste mit zwei Sonnen, futuristischer Anzug, leuchtend, filmische Ansicht.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_4.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "5",
+        "prompt": "Ein ruhiger europäischer Altstadtplatz mit Kopfsteinpflasterstraßen, Cafés und Fahrrädern, Beleuchtung zur goldenen Stunde.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_5.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "6",
+        "prompt": "Eine ultrarealistische ruhige Waldszene mit goldenem Sonnenlicht, das durch hoch aufragende Kiefern strömt, sanfter Morgennebel zieht über den Waldboden.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_6.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "7",
+        "prompt": "Ein Straßenhändler kocht auf einem geschäftigen asiatischen Markt, Dampf steigt von heißen Pfannen auf, lebendige Farben.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_7.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "8",
+        "prompt": "Eine futuristische Stadt, angetrieben von KI, fliegende Autos und holografische Werbetafeln, leuchtend blaue Lichter, ultrarealistisch.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_8.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "9",
+        "prompt": "Ein minimalistischer, moderner Arbeitsplatz mit einem eleganten Laptop, Kaffee und neutralen Tönen, saubere Ästhetik.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_9.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "10",
+        "prompt": "Goldener Sonnenaufgang über schneebedeckten Bergen, warmes Morgenlicht spiegelt sich auf eisigen Gipfeln, ultrarealistisch.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_10.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "11",
+        "prompt": "Palmen wiegen sich an einem weißen Sandstrand, türkisfarbenes Wasser und sanfte Wellen unter einem pink-orangenen Sonnenuntergangshimmel.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_11.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "12",
+        "prompt": "Ein schmaler Pfad schlängelt sich durch einen dichten grünen Wald, Sonnenlicht sickert durch die Blätter, neblige Morgenstimmung.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_12.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "13",
+        "prompt": "Goldene Sanddünen unter einem leuchtend orangefarbenen Himmel, ein einsamer Reisender geht in der Ferne, filmische Wüstenansicht.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_13.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "14",
+        "prompt": "Ein majestätischer Wasserfall stürzt in ein kristallklares Becken, umgeben von üppigem tropischen Dschungel, fotorealistisches Detail.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_14.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "15",
+        "prompt": "Ein verschneiter Kiefernwald unter einem leuchtenden Polarlicht-Nachthimmel, Spiegelung auf eisigem See, ultradetailiert.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_15.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "16",
+        "prompt": "Goldene Weizenfelder wiegen sich im Wind mit einem kleinen Bauernhaus und fernen Bergen, warmes Abendsonnenlicht.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_16.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "17",
+        "prompt": "Farbenfrohes Korallenriff voller tropischer Fische, Sonnenlicht strömt durch klares blaues Wasser, ultrarealistischer Fotostil.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_17.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "18",
+        "prompt": "Ein weites Feld von Wildblumen in voller Blüte, Schmetterlinge fliegen, heller Sommerhimmel, verträumte Atmosphäre.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_18.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      }
+    ]
+  },
+
+  { "id": 3,
+    "lang_code": "es",
+    "data": [
+      {
+        "id": "1",
+        "prompt": "Un bosque tranquilo con luz solar filtrándose a través de altos pinos, niebla en el suelo, ultra realista, relación de aspecto 1:1.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_1.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "2",
+        "prompt": "Callejón iluminado con neón en una ciudad futurista cyberpunk, lluvia en el suelo, hologramas brillantes, ultra realista.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_2.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "3",
+        "prompt": "Un solo cerezo en flor en una colina verde, pétalos cayendo con el viento, fondo de atardecer, fotorrealista.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_3.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "4",
+        "prompt": "Un astronauta solitario de pie en un desierto alienígena con dos soles, traje futurista brillante, vista cinematográfica.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_4.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "5",
+        "prompt": "Una tranquila plaza de un casco antiguo europeo con calles adoquinadas, cafeterías y bicicletas, iluminación de la hora dorada.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_5.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "6",
+        "prompt": "Una escena de bosque ultra realista y tranquila con luz solar dorada fluyendo a través de imponentes pinos, suave niebla matutina flotando sobre el suelo del bosque.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_6.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "7",
+        "prompt": "Un vendedor de comida callejera cocinando en un concurrido mercado asiático, vapor subiendo de sartenes calientes, colores vibrantes.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_7.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "8",
+        "prompt": "Una ciudad futurista impulsada por IA, coches voladores y vallas publicitarias holográficas, luces azules brillantes, ultra realista.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_8.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "9",
+        "prompt": "Un espacio de trabajo moderno y minimalista con un portátil elegante, café y tonos neutros, estética limpia.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_9.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "10",
+        "prompt": "Amanecer dorado sobre montañas cubiertas de nieve, luz cálida de la mañana reflejándose en picos helados, ultra realista.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_10.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "11",
+        "prompt": "Palmeras meciéndose en una playa de arena blanca, agua turquesa y suaves olas bajo un cielo de atardecer rosa anaranjado.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_11.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "12",
+        "prompt": "Un sendero estrecho que serpentea a través de un denso bosque verde con luz solar filtrándose a través de las hojas, atmósfera de mañana brumosa.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_12.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "13",
+        "prompt": "Dunas de arena dorada bajo un cielo naranja vibrante, un viajero solitario caminando en la distancia, vista cinematográfica del desierto.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_13.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "14",
+        "prompt": "Una majestuosa cascada cayendo en una piscina de agua cristalina rodeada de exuberante selva tropical, detalle fotorrealista.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_14.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "15",
+        "prompt": "Un bosque de pinos nevado bajo un cielo nocturno con aurora boreal brillante, reflejo en un lago helado, ultra detallado.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_15.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "16",
+        "prompt": "Campos de trigo dorados ondeando con el viento con una pequeña granja y montañas distantes, luz cálida del sol de la tarde.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_16.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "17",
+        "prompt": "Arrecife de coral colorido lleno de peces tropicales, luz solar fluyendo a través de agua azul clara, estilo de fotografía ultra realista.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_17.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "18",
+        "prompt": "Un vasto campo de flores silvestres en plena floración, mariposas volando, cielo de verano brillante, atmósfera de ensueño.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_18.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      }
+    ]
+  },
+
+  {
+    "id": 4,
+    "lang_code": "fr",
+    "data":[
+      {
+        "id": "1",
+        "prompt": "Une foret tranquille avec la lumiere du soleil filtrant a travers de grands pins brume sur le sol ultra realiste rapport daspect 11.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_1.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "2",
+        "prompt": "Ruelle eclairee au neon dans une ville cyberpunk futuriste pluie sur le sol hologrammes lumineux ultra realiste.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_2.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "3",
+        "prompt": "Cerisier en fleurs unique sur une colline verte petales tombant au vent coucher de soleil en arriere plan photorealiste.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_3.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "4",
+        "prompt": "Un astronaute solitaire debout sur un desert alien avec deux soleils combinaison futuriste lumineuse vue cinematographique.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_4.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "5",
+        "prompt": "Une place tranquille de vieille ville europeenne avec des rues pavees des cafes et des velos eclairage heure doree.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_5.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "6",
+        "prompt": "Une scène de forêt paisible et ultra-réaliste, avec une lumière dorée traversant de hauts pins et une douce brume matinale flottant au-dessus du sol forestier.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_6.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "7",
+        "prompt": "Un vendeur de nourriture de rue cuisinant dans un marche asiatique anime vapeur montant des poeles chaudes couleurs vibrantes.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_7.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "8",
+        "prompt": "Une ville futuriste alimentee par lIA voitures volantes et panneaux daffichage holographiques lumieres bleues brillantes ultra realiste.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_8.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "9",
+        "prompt": "Un espace de travail moderne minimaliste avec un ordinateur portable elegant du cafe et des tons neutres esthetique epuree.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_9.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "10",
+        "prompt": "Lever de soleil dore sur des montagnes enneigees lumiere matinale chaude se reflechissant sur des pics glaces ultra realiste.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_10.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "11",
+        "prompt": "Palmiers se balancant sur une plage de sable blanc eau turquoise et vagues douces sous un ciel de coucher de soleil rose orange.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_11.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "12",
+        "prompt": "Un sentier etroit serpentant a travers une foret verte dense avec la lumiere du soleil filtrant a travers les feuilles atmosphere matinale brumeuse.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_12.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "13",
+        "prompt": "Dunes de sable dore sous un ciel orange vibrant un voyageur solitaire marchant au loin vue cinematographique du desert.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_13.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "14",
+        "prompt": "Une majestueuse cascade se jetant dans une piscine cristalline entouree dune jungle tropicale luxuriante detail photorealiste.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_14.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "15",
+        "prompt": "Une foret de pins enneigee sous un ciel nocturne daurore boreale brillante reflet sur un lac glace ultra detaille.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_15.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "16",
+        "prompt": "Champs de ble dore ondulant au vent avec une petite ferme et des montagnes lointaines lumiere du soleil chaude en soiree.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_16.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "17",
+        "prompt": "Recif de corail colore plein de poissons tropicaux lumiere du soleil traversant leau bleue claire style de photographie ultra realiste.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_17.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "18",
+        "prompt": "Un vaste champ de fleurs sauvages en pleine floraison papillons volant ciel deté lumineux atmosphere de reve.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_18.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "lang_code": "hi",
+    "data":[
+      {
+        "id": "1",
+        "prompt": "लम्बे देवदार पेड़ों से छन कर आती धूप के साथ एक शांत जंगल ज़मीन पर कोहरा अति वास्तविक 11 पहलू अनुपात.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_1.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "2",
+        "prompt": "भविष्य के साइबरपंक शहर में नियॉन रोशनी वाली गली ज़मीन पर बारिश चमकदार होलोग्राम अति वास्तविक.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_2.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "3",
+        "prompt": "हरी पहाड़ी पर एक अकेला चेरी ब्लॉसम का पेड़ हवा में गिरती पंखुड़ियाँ सूर्यास्त की पृष्ठभूमि फोटोरीयलिस्टिक.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_3.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "4",
+        "prompt": "दो सूरज वाले एक अनिश्चित रेगिस्तान पर खड़ा एक अकेला अंतरिक्ष यात्री चमकता हुआ फ़्यूचरिस्टिक सूट सिनेमैटिक दृश्य.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_4.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "5",
+        "prompt": "पत्थर की सड़कों कैफे और साइकिल के साथ एक शांत यूरोपीय पुराना शहर का चौक सुनहरे घंटे की रोशनी.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_5.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "6",
+        "prompt": "एक अति-यथार्थवादी, शांत वन दृश्य जिसमें सुनहरी धूप ऊँचे पाइनों के बीच से गुज़र रही है और हल्का सुबह का कुहासा जंगल की ज़मीन पर तैर रहा है।",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_6.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "7",
+        "prompt": "एक व्यस्त एशियाई बाज़ार में खाना बनाने वाला एक स्ट्रीट फ़ूड विक्रेता गर्म कढ़ाइयों से निकलता भाप चमकदार रंग.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_7.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "8",
+        "prompt": "एआई द्वारा संचालित एक भविष्य का शहर उड़ने वाली कारों और होलोग्राफ़िक बिलबोर्ड चमकती नीली रोशनी अति वास्तविक.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_8.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "9",
+        "prompt": "एक पतले लैपटॉप कॉफ़ी और तटस्थ रंगों के साथ एक मिनिमलिस्ट आधुनिक कार्यस्थल स्वच्छ सौंदर्य.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_9.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "10",
+        "prompt": "बर्फ से ढके पहाड़ों पर सुनहरा सूर्योदय बर्फीले शिखरों पर झलकती गर्म सुबह की रोशनी अति वास्तविक.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_10.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "11",
+        "prompt": "सफेद रेतीले तट पर झूमलते नारियल के पेड़ गुलाबी नारंगी सूर्यास्त के आसमान के नीचे फ़िरोज़ी पानी और कोमल लहरें.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_11.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "12",
+        "prompt": "घने हरे जंगल से होकर गुजरने वाला एक संकरा रास्ता पत्तों से छन कर आती धूप धुंध भरा सुबह का वातावरण.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_12.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "13",
+        "prompt": "चमकदार नारंगी आसमान के नीचे सुनहरे रेत के टीले दूर चल रहा एक अकेला यात्री सिनेमैटिक रेगिस्तान दृश्य.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_13.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "14",
+        "prompt": "एक शानदार झरना गहन उष्णकटिबंधीय जंगल से घिरी एक क्रिस्टल स्पष्ट तालाब में गिरता हुआ फोटोरीयलिस्टिक डिटेल.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_14.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "15",
+        "prompt": "चमकते औरोरा बोरियालिस रात के आसमान के नीचे एक बर्फीला देवदार वन बर्फीले झील पर प्रतिबिंब अति विस्तृत.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_15.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "16",
+        "prompt": "हवा में लहराते सुनहरे गेहूँ के खेत एक छोटा फ़ार्महाउस और दूर के पहाड़ गर्म शाम का सूरज की रोशनी.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_16.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "17",
+        "prompt": "उष्णकटिबंधीय मछलियों से भरा रंगीन मूंगा चट्टान साफ नीले पानी से छन कर आती धूप अति वास्तविक फोटोग्राफी शैली.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_17.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "18",
+        "prompt": "पूरे खिले हुए जंगली फूलों का एक विशाल खेत तितलियाँ उड़ रही हैं चमकदार गर्मी का आसमान स्वप्निल वातावरण.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_18.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "lang_code": "in",
+    "data":[
+      {
+        "id": "1",
+        "prompt": "Hutan yang tenang dengan sinar matahari menyaring melalui pohon pinus tinggi kabut di tanah ultra realistis rasio aspek 11.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_1.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "2",
+        "prompt": "Gang yang diterangi neon di kota cyberpunk futuristik hujan di tanah hologram bercahaya ultra realistis.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_2.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "3",
+        "prompt": "Pohon sakura tunggal di bukit hijau kelopak jatuh tertiup angin latar belakang matahari terbenam fotorealistik.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_3.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "4",
+        "prompt": "Seorang astronot sendirian berdiri di gurun asing dengan dua matahari setelan futuristik bercahaya tampilan sinematik.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_4.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "5",
+        "prompt": "Lapangan kota tua Eropa yang tenang dengan jalan berbatu kafe dan sepeda pencahayaan golden hour.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_5.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "6",
+        "prompt": "Pemandangan hutan yang tenang dan sangat realistis dengan sinar matahari keemasan menembus pepohonan pinus yang menjulang tinggi, serta kabut pagi lembut yang melayang di atas lantai hutan.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_6.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "7",
+        "prompt": "Penjual makanan jalanan memasak di pasar Asia yang sibuk uap mengepul dari wajan panas warna cerah.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_7.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "8",
+        "prompt": "Kota futuristik ditenagai oleh AI mobil terbang dan papan iklan holografik lampu biru bercahaya ultra realistis.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_8.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "9",
+        "prompt": "Ruang kerja modern minimalis dengan laptop ramping kopi dan nada netral estetika bersih.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_9.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "10",
+        "prompt": "Matahari terbit keemasan di atas pegunungan bersalju cahaya pagi yang hangat memantul di puncak es ultra realistis.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_10.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "11",
+        "prompt": "Pohon palem bergoyang di pantai berpasir putih air pirus dan ombak lembut di bawah langit matahari terbenam merah muda oranye.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_11.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "12",
+        "prompt": "Jalur sempit berkelok-kelok melalui hutan hijau lebat dengan sinar matahari menyaring melalui daun suasana pagi berkabut.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_12.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "13",
+        "prompt": "Gundukan pasir keemasan di bawah langit oranye yang bersemangat seorang pelancong sendirian berjalan di kejauhan pemandangan gurun sinematik.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_13.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "14",
+        "prompt": "Air terjun megah mengalir ke kolam sebening kristal dikelilingi oleh hutan tropis yang rimbun detail fotorealistik.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_14.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "15",
+        "prompt": "Hutan pinus bersalju di bawah langit malam aurora borealis yang bercahaya pantulan di danau es ultra detail.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_15.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "16",
+        "prompt": "Ladang gandum keemasan melambai tertiup angin dengan rumah pertanian kecil dan pegunungan jauh sinar matahari sore yang hangat.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_16.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "17",
+        "prompt": "Terumbu karang warna-warni penuh ikan tropis sinar matahari mengalir melalui air biru jernih gaya fotografi ultra realistis.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_17.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "18",
+        "prompt": "Ladang bunga liar yang luas mekar penuh kupu-kupu terbang langit musim panas yang cerah suasana melamun.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_18.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      }
+    ]
+  },
+
+  {
+    "id": 7,
+    "lang_code": "ja",
+    "data": [
+      {
+        "id": "1",
+        "prompt": "背の高い松の木の間から日光が差し込む穏やかな森地面には霧超リアル1対1アスペクト比.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_1.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "2",
+        "prompt": "未来のサイバーパンク都市のネオンに照らされた路地地面の雨光るホログラム超リアル.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_2.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "3",
+        "prompt": "緑の丘に一本の桜の木風に舞う花びら夕焼けの背景フォトリアル.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_3.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "4",
+        "prompt": "二つの太陽を持つエイリアンの砂漠に立つ孤独な宇宙飛行士光る未来的なスーツシネマティックな眺め.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_4.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "5",
+        "prompt": "石畳の通りカフェ自転車がある静かなヨーロッパの旧市街の広場ゴールデンアワーの照明.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_5.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "6",
+        "prompt": "超リアルな静かな森の風景。そびえ立つ松の木々の間を黄金の陽光が差し込み、柔らかな朝霧が森の地面を漂っている。",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_6.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "7",
+        "prompt": "賑やかなアジアの市場で料理をする屋台の売り手熱い鍋から立ち上る蒸気鮮やかな色.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_7.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "8",
+        "prompt": "AIを搭載した未来都市空飛ぶ車とホログラフィックな看板光る青い光超リアル.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_8.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "9",
+        "prompt": "洗練されたラップトップコーヒーニュートラルな色調を備えたミニマリストのモダンなワークスペースクリーンな美学.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_9.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "10",
+        "prompt": "雪に覆われた山々にかかる黄金の日の出凍った山頂に反射する暖かい朝の光超リアル.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_10.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "11",
+        "prompt": "白い砂浜で揺れるヤシの木ピンクオレンジの夕焼け空の下のターコイズブルーの海と穏やかな波.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_11.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "12",
+        "prompt": "葉の間から日光が差し込む鬱蒼とした緑の森を曲がりくねった狭い道霧のかかった朝の雰囲気.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_12.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "13",
+        "prompt": "鮮やかなオレンジ色の空の下の黄金の砂丘遠くに歩く孤独な旅行者シネマティックな砂漠の眺め.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_13.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "14",
+        "prompt": "豊かな熱帯のジャングルに囲まれた透き通ったプールに流れ落ちる雄大な滝フォトリアルなディテール.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_14.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "15",
+        "prompt": "光るオーロラの夜空の下の雪に覆われた松林凍った湖に反射超詳細.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_15.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "16",
+        "prompt": "小さな農家と遠くの山々がある風になびく黄金の小麦畑暖かい夕方の太陽の光.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_16.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "17",
+        "prompt": "熱帯魚でいっぱいのカラフルなサンゴ礁澄んだ青い水を通して差し込む日光超リアルな写真スタイル.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_17.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "18",
+        "prompt": "満開の広大な野原舞い飛ぶ蝶明るい夏の空夢のような雰囲気.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_18.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      }
+    ]
+  },
+
+  {
+    "id": 8,
+    "lang_code": "ko",
+    "data":[
+      {
+        "id": "1",
+        "prompt": "키가 큰 소나무 사이로 햇빛이 비치는 고요한 숲 지상의 안개 초현실적 11 종횡비.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_1.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "2",
+        "prompt": "미래의 사이버펑크 도시의 네온 불빛 골목 땅 위의 비 빛나는 홀로그램 초현실적.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_2.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "3",
+        "prompt": "녹색 언덕 위의 단 하나의 벚나무 바람에 떨어지는 꽃잎 일몰 배경 포토리얼리스틱.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_3.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "4",
+        "prompt": "두 개의 태양이 있는 외계 사막에 서 있는 외로운 우주 비행사 빛나는 미래형 슈트 시네마틱 뷰.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_4.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "5",
+        "prompt": "자갈길 카페 자전거가 있는 조용한 유럽 구시가지 광장 골든 아워 조명.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_5.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "6",
+        "prompt": "초현실적인 고요한 숲 풍경으로, 거대한 소나무 사이로 황금빛 햇살이 스며들고 부드러운 아침 안개가 숲 바닥을 가볍게 흐른다.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_6.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "7",
+        "prompt": "붐비는 아시아 시장에서 요리하는 길거리 음식 상인 뜨거운 팬에서 솟아오르는 증기 생생한 색상.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_7.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "8",
+        "prompt": "AI로 구동되는 미래 도시 나는 자동차와 홀로그램 광고판 빛나는 파란색 불빛 초현실적.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_8.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "9",
+        "prompt": "세련된 노트북 커피 뉴트럴 톤의 미니멀리스트 모던 작업 공간 깔끔한 미학.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_9.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "10",
+        "prompt": "눈 덮인 산 위로 황금빛 일출 얼음 봉우리에 반사되는 따뜻한 아침 빛 초현실적.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_10.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "11",
+        "prompt": "하얀 모래사장 위 야자수 분홍 주황색 일몰 하늘 아래 청록색 물과 부드러운 파도.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_11.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "12",
+        "prompt": "나뭇잎 사이로 햇빛이 비치는 울창한 녹색 숲을 구불구불 통과하는 좁은 길 안개 낀 아침 분위기.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_12.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "13",
+        "prompt": "선명한 주황색 하늘 아래 황금빛 모래 언덕 멀리 걷는 외로운 여행자 시네마틱 사막 풍경.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_13.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "14",
+        "prompt": "울창한 열대 정글로 둘러싸인 수정처럼 맑은 웅덩이로 쏟아지는 장엄한 폭포 포토리얼리스틱 디테일.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_14.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "15",
+        "prompt": "빛나는 오로라 밤하늘 아래 눈 덮인 소나무 숲 얼음 호수에 비친 반사 초디테일.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_15.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "16",
+        "prompt": "작은 농가와 먼 산이 있는 바람에 흔들리는 황금빛 밀밭 따뜻한 저녁 햇살.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_16.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "17",
+        "prompt": "열대어로 가득한 다채로운 산호초 맑고 푸른 물을 통해 비치는 햇빛 초현실적인 사진 스타일.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_17.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "18",
+        "prompt": "만개한 광활한 야생화 밭 날아다니는 나비 밝은 여름 하늘 꿈결 같은 분위기.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_18.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      }
+    ]
+  },
+
+  {
+    "id": 9,
+    "lang_code": "pt",
+    "data":[
+      {
+        "id": "1",
+        "prompt": "Uma floresta tranquila com luz solar filtrando por pinheiros altos neblina no chao ultra realista proporcao de aspecto 11.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_1.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "2",
+        "prompt": "Beco iluminado por neon em uma cidade cyberpunk futurista chuva no chao hologramas brilhantes ultra realista.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_2.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "3",
+        "prompt": "Unica cerejeira em flor em uma colina verde petalas caindo ao vento por do sol de fundo fotorrealista.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_3.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "4",
+        "prompt": "Um astronauta solitario em pe em um deserto alienigena com dois sois traje futurista brilhando visao cinematica.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_4.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "5",
+        "prompt": "Uma praca tranquila da cidade velha europeia com ruas de paralelepipedos cafes e bicicletas iluminacao da hora dourada.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_5.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "6",
+        "prompt": "Uma cena de floresta tranquila e ultra-realista, com luz dourada atravessando altos pinheiros e uma suave névoa matinal flutuando sobre o chão da floresta.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_6.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "7",
+        "prompt": "Um vendedor de comida de rua cozinhando em um movimentado mercado asiatico vapor subindo de panelas quentes cores vibrantes.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_7.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "8",
+        "prompt": "Uma cidade futurista movida a IA carros voadores e outdoors holograficos luzes azuis brilhantes ultra realista.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_8.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "9",
+        "prompt": "Um espaco de trabalho moderno minimalista com um laptop elegante cafe e tons neutros estetica limpa.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_9.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "10",
+        "prompt": "Nascer do sol dourado sobre montanhas nevadas luz quente da manha refletindo em picos gelados ultra realista.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_10.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "11",
+        "prompt": "Palmeiras balancando em uma praia de areia branca agua turquesa e ondas suaves sob um ceu de por do sol rosa laranja.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_11.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "12",
+        "prompt": "Uma trilha estreita serpenteando por uma densa floresta verde com luz solar filtrando pelas folhas atmosfera de manha encoberta.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_12.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "13",
+        "prompt": "Dunas de areia dourada sob um ceu laranja vibrante um viajante solitario caminhando ao longe visao cinematica do deserto.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_13.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "14",
+        "prompt": "Uma majestosa cachoeira caindo em uma piscina cristalina cercada por uma exuberante selva tropical detalhe fotorrealista.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_14.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "15",
+        "prompt": "Uma floresta de pinheiros nevada sob um ceu noturno de aurora boreal brilhante reflexo no lago gelado ultra detalhado.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_15.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "16",
+        "prompt": "Campos de trigo dourado ondulando ao vento com uma pequena fazenda e montanhas distantes luz do sol quente da noite.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_16.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "17",
+        "prompt": "Recife de coral colorido cheio de peixes tropicais luz solar fluindo pela agua azul clara estilo de fotografia ultra realista.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_17.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      },
+      {
+        "id": "18",
+        "prompt": "Um vasto campo de flores silvestres em plena floracao borboletas voando ceu de verao brilhante atmosfera de sonho.",
+        "image": "https://s3.v1solution.com/v1solution/V235_Alexa/img_prompt_create/prompt_create_image_18.png",
+        "style": " ultra-realistic",
+        "ratio": ""
+      }
+    ]
+  }
+]

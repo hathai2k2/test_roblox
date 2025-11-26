@@ -1,0 +1,24 @@
+# Android Studio
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# APK files
+*.apk
+*.ap_
+*.aab
+
+# Release folder
+app/release/
+app/debug/
+
+# Signing files
+*.jks
+*.keystore

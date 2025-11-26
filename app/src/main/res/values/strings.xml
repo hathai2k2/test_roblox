@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">test_ronlox</string>
+    <!-- Body parts descriptions -->
+    <string name="body">Character Body</string>
+    <string name="left_hand">Left Hand</string>
+    <string name="right_hand">Right Hand</string>
+    <string name="left_leg">Left Leg</string>
+    <string name="right_leg">Right Leg</string>
+
+    <!-- Cloth types -->
+    <string name="t_shirt">T-Shirt</string>
+    <string name="shirt">Shirt</string>
+    <string name="pants">Pants</string>
+</resources>
