@@ -46,12 +46,12 @@ class MainActivity : AppCompatActivity() {
         clothesView = findViewById(R.id.clothesView)
 
         // Load sample clothes data
-        val bitmap = BitmapFactory.decodeResource(resources, R.drawable.texture)
+        val bitmap = BitmapFactory.decodeResource(resources, R.drawable.tshirt)
         val density = resources.displayMetrics.density
         val builder = ClothesBuilder(density)
         currentClothes = builder.buildClothesFromBitmap(bitmap, "Sirt")
         // Load the clothes parts into ClothesView
-        clothesView.loadParts(currentClothes, isLeg = true, isArm = false)
+        clothesView.loadParts(currentClothes, isLeg = false, isArm = true)
 
         // Nút thêm sticker
         findViewById<Button>(R.id.addStickerBtn).setOnClickListener {
@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.saveTemplateBtn).setOnClickListener {
             if (checkPermission()) {
                 // Tạo template Roblox từ clothes gốc (không có stickers)
-                val templateBitmap = clothesView.captureAsTemplate(currentClothes,isLeg = true)
+                val templateBitmap = clothesView.captureAsTemplate(currentClothes,isLeg = false,isArm = true)
 
                 // Lưu template
                 saveImage(templateBitmap, "ClothesView_Template")

@@ -69,8 +69,8 @@ class ClothesView2 @JvmOverloads constructor(
 
         // Load arms if enabled
         if (isArm) {
-            if (clothes.parts.size > 1) leftHandView.setImageBitmap(clothes.parts[1])
-            if (clothes.parts.size > 2) rightHandView.setImageBitmap(clothes.parts[2])
+            if (clothes.parts.size > 6) rightHandView.setImageBitmap(clothes.parts[6])
+            if (clothes.parts.size > 12) leftHandView.setImageBitmap(clothes.parts[12])
         }
 
         // Load legs if enabled
@@ -315,7 +315,7 @@ class ClothesView2 @JvmOverloads constructor(
         val canvas = Canvas(templateBitmap)
 
         // Background màu xám nhạt chuẩn Roblox
-        canvas.drawColor(Color.rgb(163, 162, 165))
+        canvas.drawColor(Color.TRANSPARENT)
 
         val paint = Paint(Paint.ANTI_ALIAS_FLAG)
 
@@ -324,10 +324,11 @@ class ClothesView2 @JvmOverloads constructor(
 
         // ============== TORSO (BODY) - front (0-5) ==============
         // Index 0: FRONT (231, 74) - 128×128 - CÓ STICKERS
+
         canvas.drawBitmap(bodyWithStickers, null, RectF(231f, 74f, 359f, 202f), paint)
 
         // Index 1-5: Các faces khác KHÔNG có stickers, dùng parts gốc
-        canvas.drawBitmap(clothes.parts[1], null, RectF(165f, 74f, 229f, 202f), paint)
+        canvas.drawBitmap(  clothes.parts[1], null, RectF(165f, 74f, 229f, 202f), paint)
         canvas.drawBitmap(clothes.parts[2], null, RectF(361f, 74f, 425f, 202f), paint)
         canvas.drawBitmap(clothes.parts[3], null, RectF(427f, 74f, 555f, 202f), paint)
         canvas.drawBitmap(clothes.parts[4], null, RectF(231f, 8f, 359f, 72f), paint)
@@ -336,16 +337,24 @@ class ClothesView2 @JvmOverloads constructor(
         // ============== RIGHT LEG - right (6-11) ==============
         // Chỉ merge stickers nếu this.isLegLoaded = true
         // Right leg FRONT là parts[6]
-        val rightLegWithStickers = if (isLeg && clothes.parts.size > 12) {
-            mergeStickersIntoPart(clothes.parts[12], rightLegView)
-        } else if (clothes.parts.size > 12) {
-            clothes.parts[12]
+        val rightHandWithStickers = if (isArm && clothes.parts.size > 6) {
+            mergeStickersIntoPart(clothes.parts[6], rightHandView)
+        } else if (clothes.parts.size > 6) {
+            clothes.parts[6]
+        }else{
+            clothes.parts[0]
+        }
+
+        val rightLegWithStickers = if (isLeg && clothes.parts.size > 6) {
+            mergeStickersIntoPart(clothes.parts[6], rightLegView)
+        } else if (clothes.parts.size > 6) {
+            clothes.parts[6]
         } else {
             clothes.parts[6]
         }
 
         // Index 6: FRONT - CÓ STICKERS nếu loaded
-        canvas.drawBitmap(rightLegWithStickers, null, RectF(308f, 355f, 372f, 483f), paint)
+        canvas.drawBitmap(if(isArm)rightHandWithStickers else rightLegWithStickers, null, RectF(308f, 355f, 372f, 483f), paint)
 
         // Index 7-11: Các faces khác KHÔNG có stickers
         canvas.drawBitmap(clothes.parts[7], null, RectF(506f, 355f, 570f, 483f), paint)
@@ -357,16 +366,24 @@ class ClothesView2 @JvmOverloads constructor(
         // ============== LEFT LEG - left (12-17) ==============
         // Chỉ merge stickers nếu this.isLegLoaded = true
         // Left leg FRONT là parts[12]
-        val leftLegWithStickers = if (isLeg && clothes.parts.size > 6) {
-            mergeStickersIntoPart(clothes.parts[6], leftLegView)
-        } else if (clothes.parts.size > 6) {
-            clothes.parts[6]
+
+        val leftHandWithStickers = if (isArm && clothes.parts.size > 12) {
+            mergeStickersIntoPart(clothes.parts[12], leftHandView)
+        } else if (clothes.parts.size > 12) {
+            clothes.parts[12]
+        }else{
+            clothes.parts[0]
+        }
+        val leftLegWithStickers = if (isLeg && clothes.parts.size > 12) {
+            mergeStickersIntoPart(clothes.parts[12], leftLegView)
+        } else if (clothes.parts.size > 12) {
+            clothes.parts[12]
         } else {
             clothes.parts[0] // fallback to body
         }
 
         // Index 12: FRONT - CÓ STICKERS nếu loaded
-        canvas.drawBitmap(leftLegWithStickers, null, RectF(217f, 355f, 281f, 483f), paint)
+        canvas.drawBitmap(if(isArm)leftHandWithStickers else leftLegWithStickers, null, RectF(217f, 355f, 281f, 483f), paint)
 
         // Index 13-17: Các faces khác KHÔNG có stickers
         canvas.drawBitmap(clothes.parts[13], null, RectF(151f, 355f, 215f, 483f), paint)
@@ -390,7 +407,7 @@ class ClothesView2 @JvmOverloads constructor(
         val paint = Paint(Paint.ANTI_ALIAS_FLAG)
 
         // Background color (màu xám nhạt Roblox)
-        val backgroundColor = Color.rgb(163, 162, 165)
+        val backgroundColor = Color.TRANSPARENT
         val bgPaint = Paint().apply {
             color = backgroundColor
             style = Paint.Style.FILL
