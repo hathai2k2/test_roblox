@@ -33,6 +33,19 @@ class ClothesView2 @JvmOverloads constructor(
     // Store original clothes data (with pre-cut parts from ClothesBuilder)
     private var currentClothes: Clothes? = null
 
+    // Touch-to-change-color configuration
+    var enableBodyPartColorChange = false
+    var colorChangeIsLeg = true
+    var colorChangeIsArm = true
+    var colorToApply = Color.BLUE
+
+    // Touch-to-change-texture configuration
+    var useTextureMode = false  // false = color mode, true = texture mode
+    var textureToApply: Bitmap? = null
+
+    // Callback khi touch vào body part
+    var onBodyPartTouched: ((partName: String, partIndex: Int) -> Unit)? = null
+
     init {
         // Inflate people.xml layout
         inflate(context, R.layout.people, this)
@@ -48,6 +61,81 @@ class ClothesView2 @JvmOverloads constructor(
         // Add transparent sticker overlay on top
         stickerOverlay = StickerOverlay(context)
         addView(stickerOverlay, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT))
+
+        // Setup touch listeners for body parts
+        setupBodyPartTouchListeners()
+    }
+
+    /**
+     * Setup touch listeners cho các body parts
+     */
+    @SuppressLint("ClickableViewAccessibility")
+    private fun setupBodyPartTouchListeners() {
+        // Body touch listener
+        bodyView.setOnTouchListener { _, event ->
+            android.util.Log.d("ClothesView2", "Body touched! Action: ${event.action}, Enabled: $enableBodyPartColorChange")
+            if (enableBodyPartColorChange && event.action == MotionEvent.ACTION_DOWN) {
+                android.util.Log.d("ClothesView2", "Body touch detected - calling callback")
+                onBodyPartTouched?.invoke("body", 0)
+                applyColorOrTexture(0)
+                true
+            } else false
+        }
+
+        // Left arm touch listener
+        leftHandView.setOnTouchListener { _, event ->
+            android.util.Log.d("ClothesView2", "Left hand touched! Action: ${event.action}, Enabled: $enableBodyPartColorChange, IsArm: $colorChangeIsArm")
+            if (enableBodyPartColorChange && colorChangeIsArm && event.action == MotionEvent.ACTION_DOWN) {
+                android.util.Log.d("ClothesView2", "Left hand touch detected - calling callback")
+                onBodyPartTouched?.invoke("left_hand", 1)
+                applyColorOrTexture(1)
+                true
+            } else false
+        }
+
+        // Right arm touch listener
+        rightHandView.setOnTouchListener { _, event ->
+            android.util.Log.d("ClothesView2", "Right hand touched! Action: ${event.action}, Enabled: $enableBodyPartColorChange, IsArm: $colorChangeIsArm")
+            if (enableBodyPartColorChange && colorChangeIsArm && event.action == MotionEvent.ACTION_DOWN) {
+                android.util.Log.d("ClothesView2", "Right hand touch detected - calling callback")
+                onBodyPartTouched?.invoke("right_hand", 2)
+                applyColorOrTexture(2)
+                true
+            } else false
+        }
+
+        // Left leg touch listener
+        leftLegView.setOnTouchListener { _, event ->
+            android.util.Log.d("ClothesView2", "Left leg touched! Action: ${event.action}, Enabled: $enableBodyPartColorChange, IsLeg: $colorChangeIsLeg")
+            if (enableBodyPartColorChange && colorChangeIsLeg && event.action == MotionEvent.ACTION_DOWN) {
+                android.util.Log.d("ClothesView2", "Left leg touch detected - calling callback")
+                onBodyPartTouched?.invoke("left_leg", 6)
+                applyColorOrTexture(6)
+                true
+            } else false
+        }
+
+        // Right leg touch listener
+        rightLegView.setOnTouchListener { _, event ->
+            android.util.Log.d("ClothesView2", "Right leg touched! Action: ${event.action}, Enabled: $enableBodyPartColorChange, IsLeg: $colorChangeIsLeg")
+            if (enableBodyPartColorChange && colorChangeIsLeg && event.action == MotionEvent.ACTION_DOWN) {
+                android.util.Log.d("ClothesView2", "Right leg touch detected - calling callback")
+                onBodyPartTouched?.invoke("right_leg", 12)
+                applyColorOrTexture(12)
+                true
+            } else false
+        }
+    }
+
+    /**
+     * Áp dụng màu hoặc texture tùy theo mode
+     */
+    private fun applyColorOrTexture(partIndex: Int) {
+        if (useTextureMode && textureToApply != null) {
+            setPartTextureOverlay(partIndex, textureToApply!!)
+        } else {
+            setPartColorOverlay(partIndex, colorToApply)
+        }
     }
 
     /**
@@ -81,12 +169,26 @@ class ClothesView2 @JvmOverloads constructor(
     }
 
     /**
+     * Bật/tắt chế độ touch để đổi màu body parts
+     */
+    fun enableTouchToChangeColor(
+        enabled: Boolean,
+        color: Int = Color.BLUE,
+        isLeg: Boolean = true,
+        isArm: Boolean = true
+    ) {
+        enableBodyPartColorChange = enabled
+        colorToApply = color
+        colorChangeIsLeg = isLeg
+        colorChangeIsArm = isArm
+    }
+
+    /**
      * Thay đổi bitmap của 1 phần bất kỳ
      */
     fun setPartBitmap(index: Int, bmp: Bitmap) {
         when (index) {
             0 -> {
-
                 bodyView.setImageBitmap(bmp)
             }
             1 -> leftHandView.setImageBitmap(bmp)
@@ -94,6 +196,98 @@ class ClothesView2 @JvmOverloads constructor(
             6 -> leftLegView.setImageBitmap(bmp)
             12 -> rightLegView.setImageBitmap(bmp)
         }
+    }
+
+    /**
+     * Thay đổi màu/texture của một phần mà không ảnh hưởng đến background trong suốt
+     * Chỉ áp dụng màu lên vùng có nội dung, giữ nguyên alpha channel
+     */
+    fun setPartColorOverlay(index: Int, color: Int) {
+        val view = when (index) {
+            0 -> bodyView
+            1 -> leftHandView
+            2 -> rightHandView
+            6 -> leftLegView
+            12 -> rightLegView
+            else -> return
+        }
+
+        // Lấy bitmap hiện tại
+        val currentBitmap = (view.drawable as? android.graphics.drawable.BitmapDrawable)?.bitmap
+            ?: return
+
+        // Tạo bitmap mới với overlay màu, giữ nguyên alpha
+        val overlayBitmap = applyColorOverlay(currentBitmap, color)
+        view.setImageBitmap(overlayBitmap)
+    }
+
+    /**
+     * Thay đổi texture của một phần mà không ảnh hưởng đến background trong suốt
+     * Chỉ áp dụng texture lên vùng có nội dung (không trong suốt)
+     */
+    fun setPartTextureOverlay(index: Int, textureBitmap: Bitmap) {
+        val view = when (index) {
+            0 -> bodyView
+            1 -> leftHandView
+            2 -> rightHandView
+            6 -> leftLegView
+            12 -> rightLegView
+            else -> return
+        }
+
+        // Lấy bitmap hiện tại làm mask
+        val currentBitmap = (view.drawable as? android.graphics.drawable.BitmapDrawable)?.bitmap
+            ?: return
+
+        // Áp dụng texture chỉ lên vùng không trong suốt
+        val resultBitmap = applyTextureWithMask(currentBitmap, textureBitmap)
+        view.setImageBitmap(resultBitmap)
+    }
+
+    /**
+     * Áp dụng màu overlay lên bitmap, giữ nguyên alpha channel
+     */
+    private fun applyColorOverlay(source: Bitmap, color: Int): Bitmap {
+        val width = source.width
+        val height = source.height
+        val result = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+
+        val canvas = Canvas(result)
+        val paint = Paint(Paint.ANTI_ALIAS_FLAG)
+
+        // Vẽ bitmap gốc
+        canvas.drawBitmap(source, 0f, 0f, paint)
+
+        // Áp dụng color overlay chỉ lên vùng có nội dung
+        paint.colorFilter = PorterDuffColorFilter(color, PorterDuff.Mode.SRC_ATOP)
+        canvas.drawBitmap(source, 0f, 0f, paint)
+
+        return result
+    }
+
+    /**
+     * Áp dụng texture lên bitmap, sử dụng alpha channel của source làm mask
+     */
+    private fun applyTextureWithMask(mask: Bitmap, texture: Bitmap): Bitmap {
+        val width = mask.width
+        val height = mask.height
+
+        // Scale texture để match với kích thước của mask
+        val scaledTexture = Bitmap.createScaledBitmap(texture, width, height, true)
+
+        val result = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(result)
+
+        // Vẽ texture trước
+        canvas.drawBitmap(scaledTexture, 0f, 0f, null)
+
+        // Sử dụng mask để giữ chỉ vùng không trong suốt
+        val maskPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            xfermode = PorterDuffXfermode(PorterDuff.Mode.DST_IN)
+        }
+        canvas.drawBitmap(mask, 0f, 0f, maskPaint)
+
+        return result
     }
 
     /**
@@ -199,106 +393,13 @@ class ClothesView2 @JvmOverloads constructor(
     }
 
     /**
-     * Lấy Clothes object mới với stickers đã được apply vào từng part
-     * Có thể dùng để rebuild lại như ban đầu
-     */
-    fun getClothesWithStickers(): Clothes {
-        val parts = mutableListOf<Bitmap>()
-
-        // Chụp từng body part riêng biệt với stickers
-        // Index 0: Body
-        bodyView.isDrawingCacheEnabled = true
-        val bodyBitmap = captureViewWithStickers(bodyView)
-        bodyView.isDrawingCacheEnabled = false
-
-        // Index 1: Left arm
-        val leftArmBitmap = captureViewWithStickers(leftHandView)
-
-        // Index 2: Right arm
-        val rightArmBitmap = captureViewWithStickers(rightHandView)
-
-        // Index 3-5: Placeholder
-        for (i in 3..5) {
-            parts.add(bodyBitmap.copy(Bitmap.Config.ARGB_8888, true))
-        }
-
-        // Index 6: Left leg
-        val leftLegBitmap = captureViewWithStickers(leftLegView)
-
-        // Index 7-11: Placeholder
-        for (i in 7..11) {
-            parts.add(bodyBitmap.copy(Bitmap.Config.ARGB_8888, true))
-        }
-
-        // Index 12: Right leg
-        val rightLegBitmap = captureViewWithStickers(rightLegView)
-
-        // Build list theo đúng thứ tự
-        val finalParts = mutableListOf<Bitmap>()
-        finalParts.add(bodyBitmap)      // 0
-        finalParts.add(leftArmBitmap)   // 1
-        finalParts.add(rightArmBitmap)  // 2
-        for (i in 3..5) finalParts.add(bodyBitmap.copy(Bitmap.Config.ARGB_8888, true))
-        finalParts.add(leftLegBitmap)   // 6
-        for (i in 7..11) finalParts.add(bodyBitmap.copy(Bitmap.Config.ARGB_8888, true))
-        finalParts.add(rightLegBitmap)  // 12
-
-        return Clothes(parts = finalParts, type = "merged")
-    }
-
-    /**
-     * Chụp một ImageView riêng lẻ với stickers overlap
-     */
-    private fun captureViewWithStickers(view: ImageView): Bitmap {
-        // Lấy vị trí của view trong parent
-        val location = IntArray(2)
-        view.getLocationInWindow(location)
-
-        val viewBitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
-        val canvas = Canvas(viewBitmap)
-
-        // Vẽ view gốc
-        view.draw(canvas)
-
-        // Vẽ stickers nếu overlap với view này
-        val viewRect = Rect(location[0], location[1], location[0] + view.width, location[1] + view.height)
-
-        stickerOverlay.stickers.forEach { sticker ->
-            val stickerRect = RectF(
-                sticker.x,
-                sticker.y,
-                sticker.x + sticker.width * sticker.scale,
-                sticker.y + sticker.height * sticker.scale
-            )
-
-            // Check overlap
-            if (Rect(
-                    stickerRect.left.toInt(),
-                    stickerRect.top.toInt(),
-                    stickerRect.right.toInt(),
-                    stickerRect.bottom.toInt()
-                ).intersect(viewRect)
-            ) {
-                // Vẽ sticker vào canvas, adjust position
-                val offsetX = stickerRect.left - location[0]
-                val offsetY = stickerRect.top - location[1]
-
-                val scaledSticker = Bitmap.createScaledBitmap(
-                    sticker.bitmap,
-                    (sticker.width * sticker.scale).toInt(),
-                    (sticker.height * sticker.scale).toInt(),
-                    true
-                )
-                canvas.drawBitmap(scaledSticker, offsetX, offsetY, null)
-            }
-        }
-
-        return viewBitmap
-    }
-
-    /**
      * Lưu template format chuẩn Roblox Classic Clothing (585×559 PNG)
      * Với stickers chỉ merge vào các part đang hiển thị (FRONT faces)
+     *
+     * **CẢI TIẾN MỚI:**
+     * - Capture được texture/color đã apply thông qua setPartColorOverlay() hoặc setPartTextureOverlay()
+     * - Lấy bitmap hiện tại từ ImageView thay vì dùng parts gốc từ Clothes
+     * - Support cả parts có texture và không có texture
      */
     fun captureAsTemplate(clothesParam: Clothes? = null, isLeg: Boolean = false, isArm: Boolean = false): Bitmap {
         val clothes = clothesParam ?: currentClothes
@@ -319,11 +420,14 @@ class ClothesView2 @JvmOverloads constructor(
 
         val paint = Paint(Paint.ANTI_ALIAS_FLAG)
 
-        // Chỉ merge stickers vào part FRONT (parts[0]) của body
-        val bodyWithStickers = mergeStickersIntoPart(clothes.parts[0], bodyView)
+        // Lấy bitmap hiện tại từ bodyView (có thể có texture đã apply)
+        val currentBodyBitmap = getCurrentBitmapFromView(bodyView, clothes.parts[0])
+
+        // Merge stickers vào part FRONT của body với texture (nếu có)
+        val bodyWithStickers = mergeStickersIntoPart(currentBodyBitmap, bodyView)
 
         // ============== TORSO (BODY) - front (0-5) ==============
-        // Index 0: FRONT (231, 74) - 128×128 - CÓ STICKERS
+        // Index 0: FRONT (231, 74) - 128×128 - CÓ STICKERS và TEXTURE (nếu có)
 
         canvas.drawBitmap(bodyWithStickers, null, RectF(231f, 74f, 359f, 202f), paint)
 
@@ -337,18 +441,21 @@ class ClothesView2 @JvmOverloads constructor(
         // ============== RIGHT LEG - right (6-11) ==============
         // Chỉ merge stickers nếu this.isLegLoaded = true
         // Right leg FRONT là parts[6]
+        // Lấy bitmap hiện tại từ view (có thể có texture đã apply)
         val rightHandWithStickers = if (isArm && clothes.parts.size > 6) {
-            mergeStickersIntoPart(clothes.parts[6], rightHandView)
+            val currentRightHandBitmap = getCurrentBitmapFromView(rightHandView, clothes.parts[6])
+            mergeStickersIntoPart(currentRightHandBitmap, rightHandView)
         } else if (clothes.parts.size > 6) {
-            clothes.parts[6]
-        }else{
+            getCurrentBitmapFromView(rightHandView, clothes.parts[6])
+        } else {
             clothes.parts[0]
         }
 
         val rightLegWithStickers = if (isLeg && clothes.parts.size > 6) {
-            mergeStickersIntoPart(clothes.parts[6], rightLegView)
+            val currentRightLegBitmap = getCurrentBitmapFromView(rightLegView, clothes.parts[6])
+            mergeStickersIntoPart(currentRightLegBitmap, rightLegView)
         } else if (clothes.parts.size > 6) {
-            clothes.parts[6]
+            getCurrentBitmapFromView(rightLegView, clothes.parts[6])
         } else {
             clothes.parts[6]
         }
@@ -366,18 +473,21 @@ class ClothesView2 @JvmOverloads constructor(
         // ============== LEFT LEG - left (12-17) ==============
         // Chỉ merge stickers nếu this.isLegLoaded = true
         // Left leg FRONT là parts[12]
-
+        // Lấy bitmap hiện tại từ view (có thể có texture đã apply)
         val leftHandWithStickers = if (isArm && clothes.parts.size > 12) {
-            mergeStickersIntoPart(clothes.parts[12], leftHandView)
+            val currentLeftHandBitmap = getCurrentBitmapFromView(leftHandView, clothes.parts[12])
+            mergeStickersIntoPart(currentLeftHandBitmap, leftHandView)
         } else if (clothes.parts.size > 12) {
-            clothes.parts[12]
-        }else{
+            getCurrentBitmapFromView(leftHandView, clothes.parts[12])
+        } else {
             clothes.parts[0]
         }
+
         val leftLegWithStickers = if (isLeg && clothes.parts.size > 12) {
-            mergeStickersIntoPart(clothes.parts[12], leftLegView)
+            val currentLeftLegBitmap = getCurrentBitmapFromView(leftLegView, clothes.parts[12])
+            mergeStickersIntoPart(currentLeftLegBitmap, leftLegView)
         } else if (clothes.parts.size > 12) {
-            clothes.parts[12]
+            getCurrentBitmapFromView(leftLegView, clothes.parts[12])
         } else {
             clothes.parts[0] // fallback to body
         }
@@ -393,6 +503,20 @@ class ClothesView2 @JvmOverloads constructor(
         canvas.drawBitmap(clothes.parts[17], null, RectF(217f, 485f, 281f, 549f), paint)
 
         return templateBitmap
+    }
+
+    /**
+     * Lấy bitmap hiện tại từ ImageView (bao gồm cả texture/color đã apply)
+     * Nếu ImageView có drawable, trả về bitmap từ drawable đó
+     * Nếu không, fallback về original part bitmap
+     */
+    private fun getCurrentBitmapFromView(view: ImageView, fallbackBitmap: Bitmap): Bitmap {
+        val drawable = view.drawable
+        return if (drawable is android.graphics.drawable.BitmapDrawable) {
+            drawable.bitmap
+        } else {
+            fallbackBitmap
+        }
     }
 
     /**
@@ -465,98 +589,6 @@ class ClothesView2 @JvmOverloads constructor(
         return resultBitmap
     }
 
-    /**
-     * Capture body part với stickers đã merge và crop theo bounds của view
-     */
-    private fun captureBodyPartWithStickersCropped(view: ImageView): Bitmap {
-        // Tạo bitmap với kích thước của view
-        val partBitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
-        val partCanvas = Canvas(partBitmap)
-        val paint = Paint(Paint.ANTI_ALIAS_FLAG)
-
-        // 1. Vẽ body part gốc
-        view.draw(partCanvas)
-
-        // 2. Lấy vị trí view trong cửa sổ
-        val viewLocation = IntArray(2)
-        view.getLocationInWindow(viewLocation)
-        val viewRect = RectF(
-            viewLocation[0].toFloat(),
-            viewLocation[1].toFloat(),
-            (viewLocation[0] + view.width).toFloat(),
-            (viewLocation[1] + view.height).toFloat()
-        )
-
-        // 3. Vẽ stickers nhưng CHỈ phần overlap với view (auto crop)
-        stickerOverlay.stickers.forEach { sticker ->
-            val stickerRect = RectF(
-                sticker.x,
-                sticker.y,
-                sticker.x + sticker.width * sticker.scale,
-                sticker.y + sticker.height * sticker.scale
-            )
-
-            // Lấy vị trí sticker overlay trong cửa sổ
-            val overlayLocation = IntArray(2)
-            stickerOverlay.getLocationInWindow(overlayLocation)
-
-            // Convert sticker position to window coordinates
-            val stickerInWindow = RectF(
-                overlayLocation[0] + stickerRect.left,
-                overlayLocation[1] + stickerRect.top,
-                overlayLocation[0] + stickerRect.right,
-                overlayLocation[1] + stickerRect.bottom
-            )
-
-            // Check nếu sticker overlap với view
-            if (RectF.intersects(viewRect, stickerInWindow)) {
-                // Tính intersection (phần overlap)
-                val intersection = RectF(viewRect)
-                intersection.intersect(stickerInWindow)
-
-                // Convert về local coordinates của view
-                val localLeft = intersection.left - viewRect.left
-                val localTop = intersection.top - viewRect.top
-                val localRight = intersection.right - viewRect.left
-                val localBottom = intersection.bottom - viewRect.top
-
-                // Tính phần nào của sticker bitmap cần vẽ
-                val srcLeft = ((intersection.left - stickerInWindow.left) / (stickerInWindow.width())) * sticker.bitmap.width
-                val srcTop = ((intersection.top - stickerInWindow.top) / (stickerInWindow.height())) * sticker.bitmap.height
-                val srcRight = ((intersection.right - stickerInWindow.left) / (stickerInWindow.width())) * sticker.bitmap.width
-                val srcBottom = ((intersection.bottom - stickerInWindow.top) / (stickerInWindow.height())) * sticker.bitmap.height
-
-                // Vẽ chỉ phần cropped của sticker
-                val srcRect = Rect(
-                    srcLeft.toInt(),
-                    srcTop.toInt(),
-                    srcRight.toInt(),
-                    srcBottom.toInt()
-                )
-                val dstRect = RectF(localLeft, localTop, localRight, localBottom)
-
-                partCanvas.drawBitmap(sticker.bitmap, srcRect, dstRect, paint)
-            }
-        }
-
-        return partBitmap
-    }
-
-    private fun drawableToBitmap(drawable: android.graphics.drawable.Drawable): Bitmap {
-        if (drawable is android.graphics.drawable.BitmapDrawable) {
-            return drawable.bitmap
-        }
-
-        val bitmap = Bitmap.createBitmap(
-            drawable.intrinsicWidth.coerceAtLeast(1),
-            drawable.intrinsicHeight.coerceAtLeast(1),
-            Bitmap.Config.ARGB_8888
-        )
-        val canvas = Canvas(bitmap)
-        drawable.setBounds(0, 0, canvas.width, canvas.height)
-        drawable.draw(canvas)
-        return bitmap
-    }
 
     // Inner class for sticker overlay
     private inner class StickerOverlay(context: Context) : android.view.View(context) {
@@ -622,12 +654,14 @@ class ClothesView2 @JvmOverloads constructor(
 
             when (event.actionMasked) {
                 MotionEvent.ACTION_DOWN -> {
+                    android.util.Log.d("StickerOverlay", "Touch at ($xTouch, $yTouch), Body change enabled: $enableBodyPartColorChange")
                     lastTouchX = xTouch
                     lastTouchY = yTouch
                     selectedSticker = findStickerAt(xTouch, yTouch)
                     isResizing = false
 
                     selectedSticker?.let { sticker ->
+                        android.util.Log.d("StickerOverlay", "Sticker found - consuming event")
                         val rectF = RectF(
                             sticker.x,
                             sticker.y,
@@ -655,8 +689,20 @@ class ClothesView2 @JvmOverloads constructor(
                             invalidate()
                             return true
                         }
+                        // Có sticker được touch, consume event
+                        return true
                     }
+
+                    // Không có sticker nào được touch
+                    // Nếu body part color change enabled, pass through để body parts có thể nhận event
+                    if (enableBodyPartColorChange) {
+                        android.util.Log.d("StickerOverlay", "No sticker found, body change enabled - passing through")
+                        return false  // Pass through to views below
+                    }
+
+                    android.util.Log.d("StickerOverlay", "No sticker found, body change disabled - passing through")
                     invalidate()
+                    return false  // Pass through
                 }
 
                 MotionEvent.ACTION_MOVE -> {
@@ -685,17 +731,22 @@ class ClothesView2 @JvmOverloads constructor(
                         lastTouchX = xTouch
                         lastTouchY = yTouch
                         invalidate()
+                        return true
                     }
+                    return false  // No sticker selected, pass through
                 }
 
                 MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
+                    val hadSelectedSticker = selectedSticker != null
                     if (selectedSticker == null) {
                         invalidate()
                     }
                     isResizing = false
+                    selectedSticker = null
+                    return hadSelectedSticker  // Only consume if there was a sticker
                 }
             }
-            return true
+            return false  // Default: pass through
         }
 
         private fun findStickerAt(x: Float, y: Float): Sticker? {
