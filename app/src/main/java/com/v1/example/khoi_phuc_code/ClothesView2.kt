@@ -401,128 +401,66 @@ class ClothesView2 @JvmOverloads constructor(
      * Phần sticker nằm NGOÀI part bounds → fill màu nền (background)
      */
     private fun mergeStickersIntoPart(partBitmap: Bitmap, partView: ImageView): Bitmap {
-        // Tạo bitmap kết quả với kích thước của part gốc
+        val w = partBitmap.width
+        val h = partBitmap.height
+
+        // 1) Copy part để làm base cuối
         val resultBitmap = partBitmap.copy(Bitmap.Config.ARGB_8888, true)
-        val canvas = Canvas(resultBitmap)
-        val paint = Paint(Paint.ANTI_ALIAS_FLAG)
+        val finalCanvas = Canvas(resultBitmap)
 
-        // Background color (màu xám nhạt Roblox)
-        val backgroundColor = Color.TRANSPARENT
-        val bgPaint = Paint().apply {
-            color = backgroundColor
-            style = Paint.Style.FILL
-        }
+        // ----- SCALE VIEW → BITMAP -----
+        val partLocation = IntArray(2)
+        partView.getLocationInWindow(partLocation)
 
-        // Lấy vị trí của partView trong window
-        val viewLocation = IntArray(2)
-        partView.getLocationInWindow(viewLocation)
-        val viewRect = RectF(
-            viewLocation[0].toFloat(),
-            viewLocation[1].toFloat(),
-            (viewLocation[0] + partView.width).toFloat(),
-            (viewLocation[1] + partView.height).toFloat()
-        )
+        val scaleX = w.toFloat() / partView.width
+        val scaleY = h.toFloat() / partView.height
 
-        // Lấy vị trí overlay trong window
         val overlayLocation = IntArray(2)
         stickerOverlay.getLocationInWindow(overlayLocation)
 
-        // Scale factor từ view → part bitmap
-        val scaleX = partBitmap.width.toFloat() / partView.width
-        val scaleY = partBitmap.height.toFloat() / partView.height
+        // 2) Tạo STICKER LAYER (full bitmap)
+        val stickerLayer = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
+        val stickerCanvas = Canvas(stickerLayer)
+        val p = Paint(Paint.ANTI_ALIAS_FLAG)
 
-        // Vẽ stickers overlap với partView
-        stickerOverlay.stickers.forEach { sticker ->
-            val stickerRect = RectF(
-                overlayLocation[0] + sticker.x,
-                overlayLocation[1] + sticker.y,
-                overlayLocation[0] + sticker.x + sticker.width * sticker.scale,
-                overlayLocation[1] + sticker.y + sticker.height * sticker.scale
-            )
+        stickerOverlay.stickers.forEach { st ->
 
-            // Check nếu sticker overlap với view
-            if (RectF.intersects(viewRect, stickerRect)) {
-                // Tính intersection (phần overlap)
-                val intersection = RectF(viewRect)
-                intersection.intersect(stickerRect)
+            val stickerLeftInView = (overlayLocation[0] + st.x) - partLocation[0]
+            val stickerTopInView  = (overlayLocation[1] + st.y) - partLocation[1]
 
-                // Convert về local coordinates của view (0-viewWidth, 0-viewHeight)
-                val localLeft = intersection.left - viewRect.left
-                val localTop = intersection.top - viewRect.top
-                val localRight = intersection.right - viewRect.left
-                val localBottom = intersection.bottom - viewRect.top
+            val left   = stickerLeftInView * scaleX
+            val top    = stickerTopInView * scaleY
+            val right  = left + (st.width * st.scale) * scaleX
+            val bottom = top  + (st.height * st.scale) * scaleY
 
-                // Scale về kích thước part bitmap gốc
-                val partLeft = localLeft * scaleX
-                val partTop = localTop * scaleY
-                val partRight = localRight * scaleX
-                val partBottom = localBottom * scaleY
+            val dst = RectF(left, top, right, bottom)
 
-                // Tính phần nào của sticker cần vẽ (source rect)
-                val stickerWidth = stickerRect.width()
-                val stickerHeight = stickerRect.height()
-                val srcLeft = ((intersection.left - stickerRect.left) / stickerWidth) * sticker.bitmap.width
-                val srcTop = ((intersection.top - stickerRect.top) / stickerHeight) * sticker.bitmap.height
-                val srcRight = ((intersection.right - stickerRect.left) / stickerWidth) * sticker.bitmap.width
-                val srcBottom = ((intersection.bottom - stickerRect.top) / stickerHeight) * sticker.bitmap.height
-
-                // Vẽ TOÀN BỘ sticker trước (bao gồm cả phần ngoài bounds)
-                val stickerLocalLeft = (stickerRect.left - viewRect.left) * scaleX
-                val stickerLocalTop = (stickerRect.top - viewRect.top) * scaleY
-                val stickerLocalRight = (stickerRect.right - viewRect.left) * scaleX
-                val stickerLocalBottom = (stickerRect.bottom - viewRect.top) * scaleY
-
-                val fullStickerRect = RectF(stickerLocalLeft, stickerLocalTop, stickerLocalRight, stickerLocalBottom)
-
-                // Vẽ sticker đầy đủ
-                canvas.drawBitmap(sticker.bitmap, null, fullStickerRect, paint)
-
-                // Phần sticker nằm NGOÀI bounds → fill màu nền
-                // Top (phần trên viewRect)
-                if (stickerLocalTop < 0) {
-                    canvas.drawRect(
-                        stickerLocalLeft.coerceAtLeast(0f),
-                        stickerLocalTop,
-                        stickerLocalRight.coerceAtMost(partBitmap.width.toFloat()),
-                        0f,
-                        bgPaint
-                    )
-                }
-
-                // Bottom (phần dưới viewRect)
-                if (stickerLocalBottom > partBitmap.height) {
-                    canvas.drawRect(
-                        stickerLocalLeft.coerceAtLeast(0f),
-                        partBitmap.height.toFloat(),
-                        stickerLocalRight.coerceAtMost(partBitmap.width.toFloat()),
-                        stickerLocalBottom,
-                        bgPaint
-                    )
-                }
-
-                // Left (phần bên trái viewRect)
-                if (stickerLocalLeft < 0) {
-                    canvas.drawRect(
-                        stickerLocalLeft,
-                        stickerLocalTop.coerceAtLeast(0f),
-                        0f,
-                        stickerLocalBottom.coerceAtMost(partBitmap.height.toFloat()),
-                        bgPaint
-                    )
-                }
-
-                // Right (phần bên phải viewRect)
-                if (stickerLocalRight > partBitmap.width) {
-                    canvas.drawRect(
-                        partBitmap.width.toFloat(),
-                        stickerLocalTop.coerceAtLeast(0f),
-                        stickerLocalRight,
-                        stickerLocalBottom.coerceAtMost(partBitmap.height.toFloat()),
-                        bgPaint
-                    )
-                }
-            }
+            stickerCanvas.save()
+            stickerCanvas.rotate(st.rotation, dst.centerX(), dst.centerY())
+            stickerCanvas.drawBitmap(st.bitmap, null, dst, p)
+            stickerCanvas.restore()
         }
+
+        // 3) MASK = chính partBitmap (alpha)
+        val mask = partBitmap
+
+        // 4) Lấy INTERSECTION bằng SRC_IN
+        val stickerMasked = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
+        val maskCanvas = Canvas(stickerMasked)
+
+        // Vẽ mask trước
+        maskCanvas.drawBitmap(mask, 0f, 0f, null)
+
+        val maskPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            xfermode = PorterDuffXfermode(PorterDuff.Mode.SRC_IN)
+        }
+
+        // Chỉ giữ phần sticker trùng với mask
+        maskCanvas.drawBitmap(stickerLayer, 0f, 0f, maskPaint)
+        maskPaint.xfermode = null
+
+        // 5) GHÉP vào partBase
+        finalCanvas.drawBitmap(stickerMasked, 0f, 0f, null)
 
         return resultBitmap
     }
