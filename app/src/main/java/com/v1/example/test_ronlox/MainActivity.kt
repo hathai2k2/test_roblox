@@ -89,10 +89,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Nút xóa stickers
+        // Nút xóa stickers và textures
         findViewById<Button>(R.id.undo).setOnClickListener {
-            clothesView.clearStickers()
-            Log.d("MainActivity", "Cleared all stickers")
+            clothesView.clearAll(isLeg = true,isArm = false)
+            Log.d("MainActivity", "Cleared all stickers and textures")
+            Toast.makeText(this, "Cleared stickers & textures", Toast.LENGTH_SHORT).show()
         }
 
         // Nút lưu ảnh (chỉ body, không có head, có stickers)
