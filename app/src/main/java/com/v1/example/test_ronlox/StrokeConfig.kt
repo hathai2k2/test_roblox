@@ -2,7 +2,6 @@ package com.v1.example.test_ronlox
 
 import android.graphics.Color
 import androidx.annotation.ColorInt
-import toDp
 
 data class StrokeConfig(
     val opacity: Int = 255,

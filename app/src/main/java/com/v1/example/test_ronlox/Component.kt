@@ -8,8 +8,6 @@ import android.graphics.PointF
 import android.graphics.RectF
 import android.view.MotionEvent
 import android.view.View
-import toDp
-import toRectF
 import kotlin.math.atan2
 import kotlin.math.sqrt
 
