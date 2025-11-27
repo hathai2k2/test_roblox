@@ -16,6 +16,9 @@ import android.graphics.Shader
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
+import toDp
+import kotlin.math.max
+import kotlin.math.min
 
 class CustomDraw(context: Context, attrs: AttributeSet? = null) : View(context, attrs) {
 

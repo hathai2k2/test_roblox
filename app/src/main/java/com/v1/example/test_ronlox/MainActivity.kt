@@ -7,7 +7,6 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
-import android.graphics.Paint
 import android.graphics.drawable.BitmapDrawable
 import android.os.Build
 import android.os.Bundle
@@ -67,7 +66,6 @@ class MainActivity : AppCompatActivity() {
 
                 // Bật chế độ touch với texture mode
                 clothesView.enableBodyPartColorChange = true
-
                 clothesView.colorChangeIsLeg = true
                 clothesView.colorChangeIsArm = true
                 clothesView.useTextureMode = true  // Bật texture mode
@@ -147,13 +145,6 @@ class MainActivity : AppCompatActivity() {
             val canvas = Canvas(bitmap)
             drawable.setBounds(0, 0, canvas.width, canvas.height)
             drawable.draw(canvas)
-            val paint = Paint().apply {
-                isAntiAlias = true
-                isFilterBitmap = true
-                isDither = true
-            }
-
-            canvas.drawBitmap(bitmap, 0f, 0f, paint)
             bitmap
         }
     }
